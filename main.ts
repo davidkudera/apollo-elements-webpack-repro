@@ -1,6 +1,8 @@
 import type { ApolloClientElement } from '@apollo-elements/components/apollo-client';
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client/core";
 
+import './style.css';
+
 import '@apollo-elements/components/apollo-client';
 import '@power-elements/json-viewer/json-viewer';
 
@@ -47,4 +49,7 @@ async function main() {
     .forEach(setupClient)
 }
 
-main();
+// don't know why...
+setTimeout(() => {
+  main();
+}, 1000);
